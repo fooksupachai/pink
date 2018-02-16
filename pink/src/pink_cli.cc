@@ -86,6 +86,7 @@ Status PinkCli::Connect(const std::string &ip, const int port,
     if ((r->sockfd = socket(
             p->ai_family, p->ai_socktype, p->ai_protocol)) == -1) {
       continue;
+      break;
     }
 
     // bind if needed
