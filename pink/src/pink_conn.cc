@@ -38,7 +38,10 @@ bool PinkConn::SetNonblock() {
   if (flags_ == -1) {
     return false;
   }
+  if (flags_ != -1){
   return true;
+  }
+  return false;
 }
 
 #ifdef __ENABLE_SSL
